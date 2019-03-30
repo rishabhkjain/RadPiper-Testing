@@ -2,6 +2,8 @@ import os
 import csv
 from subprocess import call
 
+outputFieldsLst = ["message", "success", "batch_flag", "qc_history" , "qc_run_info" , "con_passfail" , "con_cps_start", "con_cps_start_sigma"
+, "con_cps_start_mda", "con_cps_end", "con_cps_end_sigma", "con_cps_end_mda"]
 def testFile(topFolder, testIDLst, outputFieldsLst, fileNameLst, pathToCSV):
 	solutionLst = [] #where to store output files
 	call('cd ' + topFolder, shell=True) #cd to main directory

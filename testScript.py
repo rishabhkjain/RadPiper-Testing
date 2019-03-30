@@ -14,7 +14,7 @@ def testFile(topFolder, testIDLst, outputFieldsLst, fileNameLst, pathToCSV):
 			call ("rm -rf  /" + topFolder + "/mainBag/" + file, shell = True)
 		for outputField in outputFieldsLst:
 			tmpSolution.append((outputField, PostProcessOutputArray[0][outputField]))
-	with open("resultFile", "w") as output:
+	with open("resultFile.csv", "w") as output:
 		writer = csv.writer(output, lineterminator='\n')
     	writer.writerows(solutionLst)
 
